@@ -22,8 +22,8 @@ const Newnote: NextPage = () => {
         utils.mynotes.allNotes.setData(optimisticUpdate);
       }
     },
-    onSettled: () => {
-      utils.mynotes.allNotes.invalidate();
+    onSettled: async () => {
+      await utils.mynotes.allNotes.invalidate();
     },
   });
 
